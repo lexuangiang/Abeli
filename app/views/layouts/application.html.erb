@@ -8,8 +8,7 @@
   </head>
   <body>
     <%= render "layouts/nav" %>
-    <p class="notice"><% notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= render "shared/message" %>
     <div class="container main">
       <div class="row">
         <% if user_signed_in? %>

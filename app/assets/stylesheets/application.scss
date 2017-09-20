@@ -15,6 +15,7 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "toastr";
 /* Navbar */
 .navbar-default .navbar-nav>li>a {
     color: #eee;
@@ -44,4 +45,8 @@
 }
 .sidebar-nav-fixed{
   width: 22%;
+}
+/* avatar */
+.avatar-small{
+  width: 30px;
 }

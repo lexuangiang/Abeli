@@ -3,8 +3,10 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameter, if: :devise_controller?
 
   def bmi_cal
-    user = current_user
-    bmi = user.weight/user.height**2
+    unless !user_signed_in?
+      user = current_user
+      bmi = user.weight/user.height**2
+    end
   end
   def result_bmi
     case bmi_cal
