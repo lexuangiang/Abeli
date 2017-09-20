@@ -15,3 +15,33 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+/* Navbar */
+.navbar-default .navbar-nav>li>a {
+    color: #eee;
+}
+.navbar-default .navbar-nav>li>a:hover {
+    color: yellow;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+    color: yellow;
+    background-color: #35b2b2;
+}
+.navbar-abeli{
+  border-color: rgba(34, 34, 34, 0.05);
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+  background-color:#35b2b2;
+  color:white;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+/* main */
+.main{
+  margin-top: 80px;
+}
+.sidebar-nav-fixed{
+  width: 22%;
+}

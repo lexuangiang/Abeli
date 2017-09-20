@@ -7,8 +7,41 @@
     <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
   </head>
   <body>
+    <%= render "layouts/nav" %>
     <p class="notice"><% notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="container main">
+      <div class="row">
+        <% if user_signed_in? %>
+          <div class="col-sm-9">
+            <%= yield %>
+          </div>
+          <div class="col-sm-3">
+            <div class="sidebar-nav-fixed pull-right affix">
+              <div class="well">
+                <div class="well">
+                  <p>Upcoming Events:</p>
+                </div>
+                <div class="well">
+                  <p>Tracking</p>
+                </div>
+                <div class="well">
+                  <p>Index</p>
+                  <%= number_with_precision(@bmi_user, precision: 2) %> <br>
+                  <%= @bmi_result %>
+                </div>
+                <div class="well">
+                  <p>Friends</p>
+                </div>
+              </div>
+          </div>
+        </div>
+      <% else %>
+        <div class="col-sm-12">
+            <%= yield %>
+          </div>
+      <% end %>
+    </div>
+  </div>
   </body>
 </html>
